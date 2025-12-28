@@ -1,9 +1,8 @@
 {
-  "buildCommand": "",
-  "outputDirectory": ".",
-  "devCommand": "",
-  "installCommand": "",
-  "framework": "static",
-  "rewrites": [],
-  "redirects": []
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
