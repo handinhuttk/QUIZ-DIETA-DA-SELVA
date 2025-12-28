@@ -12,50 +12,17 @@
     <!-- Meta Pixel Event Setup -->
     <meta property="fb:app_id" content="645611767911980">
 
-    <!-- Facebook Pixel -->
+    <!-- Facebook Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    
-    fbq('init', '645611767911980');
-    
-    fbq('track', 'PageView');
-    
-    // Configurações avançadas do Pixel
-    fbq('set', 'autoConfig', false, '645611767911980');
-    fbq('dataProcessingOptions', ['LDU']);
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','645611767911980');fbq('track','PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=645611767911980&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=645611767911980&amp;ev=PageView&amp;noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
     
-    <!-- UTMify -->
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
-    <script>
-      window.utmifyConfig = {
-        key: '68d4933ceb6a77aa04cb8249',
-        autoTrack: true,
-        trackPageviews: true,
-        trackClicks: true,
-        trackForms: true,
-        trackParams: [
-          'utm_source', 'utm_medium', 'utm_campaign', 
-          'utm_content', 'utm_term', 'fbclid', 'gclid'
-        ]
-      };
-    </script>
+    <!-- UTMify Script -->
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+    <script>window.utmifyConfig={key:'68d4933ceb6a77aa04cb8249',autoTrack:true,trackParams:['utm_source','utm_medium','utm_campaign','utm_content','utm_term']};</script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -113,5 +80,6 @@
 </head>
   <body class="antialiased selection:bg-emerald-900 selection:text-emerald-100">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
