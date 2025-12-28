@@ -243,4 +243,4 @@ export const QUIZ_FLOW: QuizPage[] = [
   }
 ];
 
-export const CHECKOUT_URL = "https://pay.hotmart.com/placeholder-checkout-link";
+export const CHECKOUT_URL = "https://www.ggcheckout.com/checkout/v3/sPDQ5kqBSRHTYFCjJN1v";

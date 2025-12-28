@@ -18,12 +18,6 @@ export const SalesPage: React.FC<SalesPageProps> = ({ result }) => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleCheckout = () => {
-    if (confirm("Você será redirecionado para o pagamento seguro. Deseja continuar?")) {
-        window.location.href = CHECKOUT_URL;
-    }
-  };
-
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
@@ -164,12 +158,12 @@ export const SalesPage: React.FC<SalesPageProps> = ({ result }) => {
             </p>
             </div>
 
-            <button 
-            onClick={handleCheckout}
-            className="w-full bg-gradient-to-r from-[#FCD34D] to-[#fbbf24] hover:brightness-110 text-slate-900 font-black text-xl py-5 px-8 rounded-xl shadow-[0_0_20px_rgba(252,211,77,0.3)] transition-all transform hover:scale-[1.02] uppercase tracking-wide mb-4 relative z-10"
+            <a 
+              href={CHECKOUT_URL}
+              className="block w-full text-center bg-gradient-to-r from-[#FCD34D] to-[#fbbf24] hover:brightness-110 text-slate-900 font-black text-xl py-5 px-8 rounded-xl shadow-[0_0_20px_rgba(252,211,77,0.3)] transition-all transform hover:scale-[1.02] uppercase tracking-wide mb-4 relative z-10"
             >
             COMEÇAR AGORA
-            </button>
+            </a>
 
             <div className="flex flex-wrap justify-center gap-4 text-[10px] uppercase font-bold text-slate-500 relative z-10">
             <span className="flex items-center gap-1"><svg className="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg> Sem mensalidade</span>
@@ -313,13 +307,13 @@ export const SalesPage: React.FC<SalesPageProps> = ({ result }) => {
 
         {/* Floating CTA */}
         <div className="sticky bottom-4 z-50 animate-fade-in-up">
-          <button 
-            onClick={handleCheckout}
+          <a 
+            href={CHECKOUT_URL}
             className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black text-lg py-4 px-6 rounded-xl shadow-2xl border border-emerald-400/30 uppercase tracking-wide flex items-center justify-center gap-2 animate-bounce-slow"
           >
             QUERO MEU ACESSO AGORA
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-          </button>
+          </a>
         </div>
 
       </div>
